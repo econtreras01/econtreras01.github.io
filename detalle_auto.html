@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotora Talcars - Venta de Autos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .car-gallery img {
+            max-height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column justify-content-between">
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light border">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.svg" alt="Automotora Talcars" height="60" class="px-4">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="autos.html">Autos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-5 full-height">
+        <div class="row">
+            <div class="col-md-8">
+                <div id="carCarousel" class="carousel slide car-gallery" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="car1.jpg" class="d-block w-100" alt="Auto Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="car1.jpg" class="d-block w-100" alt="Auto Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="car1.jpg" class="d-block w-100" alt="Auto Imagen 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h1>Modelo del Auto</h1>
+                <p class="lead">Marca del Auto</p>
+                <h3>Precio: $XX,XXX</h3>
+                <p><strong>Año:</strong> 2020</p>
+                <p><strong>Kilometraje:</strong> 10,000 km</p>
+                <p><strong>Transmisión:</strong> Automática</p>
+                <p><strong>Combustible:</strong> Gasolina</p>
+                <p><strong>Color:</strong> Negro</p>
+                <p><strong>Descripción:</strong> Descripción detallada del auto, incluyendo características destacadas y
+                    cualquier otra información relevante.</p>
+                <button class="btn btn-primary btn-lg">Contactar</button>
+            </div>
+        </div>
+    </main>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0 py-4">
+                    <h5 class="modal-title d-flex text-center opacity-75 justify-content-center w-100">
+                        <div class="w-100 border-end">
+                            <a href="#" id="loginTab" class="active text-dark text-decoration-none">Iniciar sesión</a>
+                        </div>
+                        <div class="w-100 border-start">
+                            <a href="#" id="registerTab" class="text-dark text-decoration-none">Registrarse</a>
+                        </div>
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <div id="loginForm">
+                        <form action="detalle_auto_edit.html">
+                            <div class="mb-3">
+                                <label for="loginEmail" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="loginEmail">
+                            </div>
+                            <div class="mb-3">
+                                <label for="loginPassword" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="loginPassword">
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="registerForm" class="d-none">
+                        <form>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="registerEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="registerPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                                <input type="password" class="form-control" id="confirmPassword" required>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary">Registrarse</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2024 Automotora Talcars. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

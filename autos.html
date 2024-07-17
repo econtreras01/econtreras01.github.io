@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotora Talcars - Venta de Autos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .car-card {
+            margin-bottom: 2em;
+        }
+
+        .search-bar {
+            margin-bottom: 1.5em;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column justify-content-between">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light border">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.svg" alt="Automotora Talcars" height="60" class="px-4">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="autos.html">Autos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <div class="text-center mb-5">
+            <h1>Autos Disponibles</h1>
+            <p>Explora nuestra amplia selección de autos disponibles para la venta</p>
+        </div>
+
+        <!-- Barra de búsqueda -->
+        <div class="row search-bar">
+            <div class="col-md-8 offset-md-2">
+                <input type="text" class="form-control" id="searchInput"
+                    placeholder="Buscar autos por modelo, marca, año...">
+            </div>
+        </div>
+
+        <!-- Pestañas de filtro -->
+        <ul class="nav nav-tabs mb-3" id="filterTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button"
+                    role="tab" aria-controls="all" aria-selected="true">Todos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="suv-tab" data-bs-toggle="tab" data-bs-target="#suv" type="button"
+                    role="tab" aria-controls="suv" aria-selected="false">SUV</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sedan-tab" data-bs-toggle="tab" data-bs-target="#sedan" type="button"
+                    role="tab" aria-controls="sedan" aria-selected="false">Sedan</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="truck-tab" data-bs-toggle="tab" data-bs-target="#truck" type="button"
+                    role="tab" aria-controls="truck" aria-selected="false">Camioneta</button>
+            </li>
+            <!-- Agrega más pestañas según sea necesario -->
+        </ul>
+
+        <!-- Contenido de las pestañas -->
+        <div class="tab-content" id="filterTabsContent">
+            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                <div class="row">
+                    <!-- Lista de autos para la pestaña 'Todos' -->
+                    <div class="col-md-4 car-card">
+                        <div class="card">
+                            <img src="car1.svg" class="card-img-top" alt="Auto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Modelo 1</h5>
+                                <p class="card-text">Descripción del auto 1. Excelente estado, único dueño.</p>
+                                <a href="detalle_auto.html" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 car-card">
+                        <div class="card">
+                            <img src="car1.svg" class="card-img-top" alt="Auto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Modelo 2</h5>
+                                <p class="card-text">Descripción del auto 2. Bajo kilometraje, excelente rendimiento.
+                                </p>
+                                <a href="detalle_auto.html" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 car-card">
+                        <div class="card">
+                            <img src="car1.svg" class="card-img-top" alt="Auto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Modelo 3</h5>
+                                <p class="card-text">Descripción del auto 3. Reciente modelo, equipado con lo último en
+                                    tecnología.</p>
+                                <a href="detalle_auto.html" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="suv" role="tabpanel" aria-labelledby="suv-tab">
+                <div class="row">
+                    <!-- Lista de autos para la pestaña 'SUV' -->
+                    <div class="col-md-4 car-card">
+                        <div class="card">
+                            <img src="car1.svg" class="card-img-top" alt="SUV 1">
+                            <div class="card-body">
+                                <h5 class="card-title">SUV Modelo 1</h5>
+                                <p class="card-text">Descripción del SUV 1. Amplio y cómodo.</p>
+                                <a href="detalle_auto.html" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Agrega más autos SUV según sea necesario -->
+                </div>
+            </div>
+            <div class="tab-pane fade" id="sedan" role="tabpanel" aria-labelledby="sedan-tab">
+                <div class="row">
+                    <!-- Lista de autos para la pestaña 'Sedan' -->
+                    <div class="col-md-4 car-card">
+                        <div class="card">
+                            <img src="car1.svg" class="card-img-top" alt="Sedan 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Sedan Modelo 1</h5>
+                                <p class="card-text">Descripción del Sedan 1. Elegante y eficiente.</p>
+                                <a href="detalle_auto.html" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Agrega más autos Sedan según sea necesario -->
+                </div>
+            </div>
+            <div class="tab-pane fade" id="truck" role="tabpanel" aria-labelledby="truck-tab">
+                <div class="row">
+                    <!-- Lista de autos para la pestaña 'Camioneta' -->
+                    <div class="col-md-4 car-card">
+                        <div class="card">
+                            <img src="car1.svg" class="card-img-top" alt="Camioneta 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Camioneta Modelo 1</h5>
+                                <p class="card-text">Descripción de la Camioneta 1. Potente y resistente.</p>
+                                <a href="detalle_auto.html" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Agrega más autos Camioneta según sea necesario -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0 py-4">
+                    <h5 class="modal-title d-flex text-center opacity-75 justify-content-center w-100">
+                        <div class="w-100 border-end">
+                            <a href="#" id="loginTab" class="active text-dark text-decoration-none">Iniciar sesión</a>
+                        </div>
+                        <div class="w-100 border-start">
+                            <a href="#" id="registerTab" class="text-dark text-decoration-none">Registrarse</a>
+                        </div>
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <div id="loginForm">
+                        <form action="detalle_auto_edit.html">
+                            <div class="mb-3">
+                                <label for="loginEmail" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="loginEmail">
+                            </div>
+                            <div class="mb-3">
+                                <label for="loginPassword" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="loginPassword">
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="registerForm" class="d-none">
+                        <form>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="registerEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="registerPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                                <input type="password" class="form-control" id="confirmPassword" required>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary">Registrarse</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2024 Automotora Talcars. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
